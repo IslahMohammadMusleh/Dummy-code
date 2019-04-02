@@ -1,0 +1,7 @@
+******regex multilines******
+https://stackoverflow.com/questions/159118/how-do-i-match-any-character-across-multiple-lines-in-a-regular-expression
+  $pattern = '/<!-- <script async(.*)<\/amp-analytics>/s';
+  $templateText = preg_replace($pattern, '', $templateText);
+It depends on the language, but there should be a modifier that you can add to the regex pattern. In PHP it is:
+/(.*)<FooBar>/s
+The s at the end causes the dot to match all characters including newlines.
