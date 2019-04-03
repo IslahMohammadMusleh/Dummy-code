@@ -1,0 +1,4 @@
+Create zip file of the new commits 
+git archive -o /path_to_zip_file to-commit-hash $(git diff --name-only to-commit-hash from-commit-hash
+git log
+git archive -o changes.zip a9e99fbcd3a03194f1efd764f7b3cc3911e308d6 $(git diff --name-only a9e99fbcd3a03194f1efd764f7b3cc3911e308d6 62601521690ce02a28c023105abfc3d13cfcb735)
