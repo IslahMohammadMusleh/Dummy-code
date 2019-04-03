@@ -1,0 +1,9 @@
+count a string occurance in db
+SELECT 
+template_id,
+template_text,
+ROUND 
+( ( LENGTH(template_text)
+- LENGTH( REPLACE 
+( template_text, "::-webkit-scrollbar { width: 0; }", "") ) )
+/LENGTH("::-webkit-scrollbar { width: 0; }") ) AS count FROM template_info
